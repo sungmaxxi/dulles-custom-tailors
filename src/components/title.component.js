@@ -4,17 +4,11 @@ import drawing from '../assets/nativityStar.png';
 const TitleComponent = () => {
     useEffect(() => {
         const iconContainer = document.getElementById('icon-container');
-    
-        // Define the number of icons to generate
         const numIcons = 10;
-    
-        // Generate and disperse the icons
         for (let i = 0; i < numIcons; i++) {
-          // Create a new image element
           const icon = document.createElement('img');
           icon.classList.add('icon');
-          icon.src = drawing; // Replace with the path to your PNG icon
-    
+          icon.src = drawing; 
           // Set the size and position of the icon
           const size = 15; // Adjust the icon size as needed
           const x = Math.random() * (iconContainer.offsetWidth - size);
@@ -32,9 +26,6 @@ const TitleComponent = () => {
         <div class="flex justify-center items-center h-screen bg-dullesGreen" id="icon-container">
             <h1 class='mx-auto text-white animate-fade-in-bounce'>Dulles Custom Tailors</h1>
         </div>
-        // <div class="flex justify-center items-center h-screen">
-        // <h1 class="mx-auto">Dulles Custom Tailors</h1>
-        // </div> 
     )
 }
 
